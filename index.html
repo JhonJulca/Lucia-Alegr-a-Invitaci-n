@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Invitación Especial - Lucía</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Sorts+Mill+Goudy&family=Oranienbaum&family=Quattrocento+Sans&display=swap" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+  <style>
+    :root {
+      --rojo-principal: #FA003F; /* Rouge Rose como color principal */
+      --rojo-claro: #FFC0CB; /* Rosa claro para fondos suaves */
+      --rojo-medio: #FF7F7F; /* Rojo medio para detalles */
+      --blanco: #FFF9FD;
+      --texto: #333;
+    }
+
+    body {
+      font-family: 'Quattrocento Sans', sans-serif;
+      background-color: var(--blanco);
+      color: var(--texto);
+      overflow: hidden;
+      scroll-behavior: smooth;
+      position: relative;
+    }
+
+    /* ==== ESTILOS GENERALES ==== */
+
+    .font-display { font-family: 'Sorts Mill Goudy', serif; }
+    .font-subtitle { font-family: 'Oranienbaum', serif; }
+
+    .section {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 3rem 1rem;
+    }
+
+    .active-section { display: flex; }
+
+    .card {
+      background: white;
+      border-radius: 1.5rem;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+      padding: 2rem;
+      max-width: 800px;
+      transition: transform 0.3s ease;
+    }
+    .card:hover { transform: scale(1.02); }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: .5rem;
+      border-radius: 2rem;
+      padding: .9rem 1.8rem;
+      font-weight: bold;
+      transition: .3s;
+      cursor: pointer;
+    }
+    .btn-primary { background: var(--rojo-principal); color: var(--blanco); }
+    .btn-primary:hover { background: var(--rojo-medio); box-shadow: 0 4px 12px rgba(250, 0, 63, 0.3); }
+    .btn-secondary { background: var(--rojo-claro); color: var(--rojo-principal); }
+    .btn-secondary:hover { background: var(--rojo-medio); color: var(--blanco); box-shadow: 0 4px 12px rgba(255, 192, 203, 0.3); }
+
+    .floating { animation: floating 3.5s ease-in-out infinite; }
+    @keyframes floating {
+      0%,100% { transform: translateY(0); }
+      50% { transform: translateY(-12px); }
+    }
+  </style>
+
+
+
+  <style>
+    /*ventana 1*/
+    .floating {
+        animation: flotar 3s ease-in-out infinite;
+    }
+
+    @keyframes flotar {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(-20px); }
+        100% { transform: translateY(0px); }
+    }
+
+    .bebe-imagen {
+        width: 150px;
+        height: auto;
+        margin-bottom: 1rem;
+        border-radius: 30%;
+         } 
+</style>
+
+
+
+<style>
+  /*ventana 2*/
+    .card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        background-color: white;
+        padding: 2rem;
+        border-radius: 5px;
+        max-width: 500px;
+        margin: 2rem auto;
+    }
+
+    .lucia-imagen {
+        width: 200px;
+        height: auto;
+        border-radius: 20%;
+        object-fit: cover;
+    }
+
+    .floating {
+        animation: flotar 5s ease-in-out infinite;
+    }
+
+    @keyframes flotar {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(-10px); }
+        100% { transform: translateY(0px); }
+    }
+</style>
+
+<style>
+    .card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        background-color: white;
+        padding: 2rem;
+        border-radius: 15px;
+        max-width: 500px;
+        margin: 2rem auto;
+    }
+
+    .lucia-sorpresa-imagen {
+        width: 200px;
+        height: auto;
+        margin-bottom: 1.5rem;
+        animation: flotar-sorpresa 6s ease-in-out infinite;
+    }
+
+    @keyframes flotar-sorpresa {
+        0% { transform: translateY(0px) rotate(0deg); }
+        25% { transform: translateY(-15px) rotate(2deg); }
+        50% { transform: translateY(0px) rotate(0deg); }
+        75% { transform: translateY(-15px) rotate(-2deg); }
+        100% { transform: translateY(0px) rotate(0deg); }
+    }
+</style>
+
+<style>
+    .card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        background-color: white;
+        padding: 1rem;
+        border-radius: 100px;
+        max-width: 500px;
+        margin: 2rem auto;
+    }
+
+    .lucia-depa-imagen {
+        width: 150px;
+        height: auto;
+        margin-bottom: 1.5rem;
+    }
+
+    .floating {
+        animation: flotar 8s ease-in-out infinite;
+    }
+
+    @keyframes flotar {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(-15px); }
+        100% { transform: translateY(0px); }
+    }
+</style>
+  
+<style>
+    /* --- LUCIA REGALOS DETALLES --- */
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 15px;
+    max-width: 500px;
+    margin: 2rem auto;
+}
+
+ .lucia-regalo-imagen {
+        width: 500px;
+        height: auto;
+        margin-bottom: 2rem;
+    }
+
+.floating {
+    animation: flotar 6s ease-in-out infinite;
+}
+
+@keyframes flotar {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+}
+
+/* --- Estilos para el Deslizador Personalizado --- */
+
+/* 1. Define el ancho de la barra de scroll */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* 2. Estilo del riel (el fondo de la barra) */
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* 3. Estilo de la barra deslizadora (la parte que se mueve) */
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: rgba(250, 0, 63, 0.5); /* Color rojo semitransparente */
+  border-radius: 10px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+
+/* 4. (Opcional) Estilo de la barra al pasar el mouse encima */
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(200, 0, 50, 0.7); /* Se hace un poco más visible */
+}
+    </style>
+
+<style>
+    .card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        background-color: white;
+        padding: 2rem;
+        border-radius: 30px;
+        max-width: 500px;
+        margin: 2rem auto;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .lucia-abrazos-imagen {
+        width: 200px;
+        height: auto;
+        margin-bottom: 2rem;
+    }
+
+    .floating {
+        animation: flotar 6s ease-in-out infinite;
+    }
+
+    @keyframes flotar {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(-12px); }
+        100% { transform: translateY(0px); }
+    }
+</style>
+
+</head>
+
+<body>
+
+<section id="sec1" class="section active-section" style="background: var(--blanco);">
+    <div class="card animate__animated animate__fadeInDown">
+        <img src="bebe lucia.jpeg" alt="Bebé Lucía" class="bebe-imagen floating">
+        <h2 class="text-2xl sm:text-4xl font-display text-[var(--rojo-principal)] leading-tight">
+            TE INVITO A MI
+            <span class="block text-4xl sm:text-5xl">BABY SHOWER</span>
+        </h2>
+        <p class="text-xl font-subtitle text-[var(--rojo-medio)] mt-4">¡Nuestra pequeña Camila está en camino!</p>
+        <p class="mt-4 text-lg">Acompáñame a celebrar este dia tan especial</p>
+        <div class="space-y-1 text-lg mt-3">
+            <p><i class="fas fa-calendar-alt text-[var(--rojo-principal)]"></i> <strong>Fecha:</strong> viernes 31 de Octubre</p>
+            <p><i class="fas fa-clock text-[var(--rojo-principal)]"></i> <strong>Hora:</strong> 7:30 p.m.</p>
+            <p><i class="fas fa-map-marker-alt text-[var(--rojo-principal)]"></i> <strong>Lugar:</strong> Jirón José Gálvez 1244, Urb. Santa Beatriz, Lima </p>
+            <p><i class="fas fa-map-marker-alt text-[var(--rojo-principal)]"></i> <strong>Referencia:</strong> A dos cuadras de la estacion Mexico del Metropolitano</p>
+        </div>
+        <button class="btn btn-primary mt-4" onclick="showSection('sec2')">Ver carta personal</button>
+    </div>
+</section>
+
+<section id="sec2" class="section bg-[var(--blanco)]">
+    <div class="card animate__animated animate__fadeInUp">
+        <img src="cat and dog.jpeg" alt="Lucía" class="lucia-imagen mb-6 floating"> 
+        <p class="text-lg font-subtitle text-[var(--rojo-medio)] mb-6">UN MENSAJE PARA TI</p>
+        <blockquote class="text-xl font-display italic mb-8 text-[#555]">
+            “Sé que esperabas esta hermosa noticia con ansias... Y yo, muy en el fondo, también.
+            Si recibiste esta invitación es porque eres una persona importante en mi vida.
+            Aunque la vida nos lleve por distintos caminos y nos veamos poco, te tengo siempre presente.”
+        </blockquote>
+        <p class="text-1.5xl font-display">Con amor,</p>
+        <p class="text-3xl text-[var(--rojo-principal)] font-subtitle mt-2 floating">Lucía </p>
+        <button class="btn btn-secondary mt-4" onclick="showSection('sec3')">Continuar</button>
+    </div>
+</section>
+  
+<section id="sec3" class="section" style="background: var(--rojo-claro);">
+    <div class="card animate__animated animate__fadeInUp">
+        <img src="lucia espera.png" alt="Lucía Sorprendida" class="lucia-sorpresa-imagen mb-6">
+        <h2 class="text-2xl font-display mb-6 text-[var(--rojo-principal)]">¡ESPERA...!</h2>
+        <p class="text-2xl text-[var(--rojo-principal)] mb-5 font-subtitle">¡ME EQUIVOQUÉ DE INVITACIÓN!</p>
+        <p class="italic mb-6 text-[var(--rojo-principal)]">Guarda esta tarjeta para dentro de dos años 💗</p>
+        <p class="text-3xl font-subtitle mb-5 text-[var(--rojo-principal)]">Porque ahora sí... TA TA TAAAN...</p>
+        <button class="btn btn-secondary mt-6" onclick="showSection('sec4')">➤ Sígueme</button>
+    </div>
+</section>
+
+<section id="sec4" class="section" style="background: linear-gradient(120deg, var(--rojo-claro), var(--rojo-medio));">
+    <div class="card animate__animated animate__fadeInUp">
+        <img src="depahouse lucia.png" alt="Lucía Depashower" class="lucia-depa-imagen floating">
+        <h2 class="text-4xl font-display mb-4 text-[var(--rojo-principal)]">DEPASHOWER</h2>
+        <p class="text-lg mb-2 text-[var(--rojo-principal)]">
+            Te invito a pasar un día de rompe y raja para darle la bienvenida a mi primer hogar.
+            Compartiremos agradables platillos y, por qué no... acompañarlo con las ya tan conocidas bebidas espirituosas.
+        </p>
+        <div class="space-y-1 text-lg text-[var(--rojo-principal)] mt-2">
+            <p><i class="fas fa-calendar-alt"></i> <strong>Fecha:</strong> Viernes 31 de Octubre</p>
+            <p><i class="fas fa-clock"></i> <strong>Hora:</strong> 7:30 p.m.</p>
+            <p><i class="fas fa-map-marker-alt"></i> <strong>Lugar:</strong> Jirón José Gálvez 1244, Urb. Santa Beatriz, Lima</p>
+            <p><i class="fas fa-map-marker-alt"></i> <strong>Referencia:</strong> Área de parrillas</p>
+        </div>
+        <button class="btn btn-primary mt-2" onclick="window.open('https://www.google.com/maps/search/?api=1&query=Jirón+José+Gálvez+1244,+Urb.+Santa+Beatriz,+Lima', '_blank')">
+            ➤ Ver ubicación
+        </button>
+        <button class="btn btn-secondary mt-2" onclick="showSection('sec5')">Ver ideas de regalo</button>
+    </div>
+</section>
+
+<section id="sec5" class="section bg-[var(--blanco)]">
+    <div class="card animate__animated animate__fadeInUp max-h-[85vh] overflow-y-auto custom-scrollbar">
+        <img src="REGALOS LUCIA.jpeg" alt="Lucía con regalo" class="lucia-regalo-imagen floating">
+        <div class="text-center mb-8">
+
+
+            <p class="text-lg text-[var(--rojo-principal)] font-subtitle">IDEAS DE REGALO</p>
+            <h3 class="text-2xl font-display text-[var(--rojo-principal)]">Si deseas traerme un presente, comparto algunas ideas que serían de gran utilidad:</h3>
+        </div>
+        <div class="grid sm:grid-cols-2 gap-6 text-left text-[var(--rojo-principal)]">
+          <div>
+
+
+              <h4 class="text-2xl border-b-2 border-[var(--rojo-principal)] mb-8 pb-2">Para la Sala</h4>
+              <ul class="space-y-3">
+                  <li>Mesita de centro					
+                      <br><a href="https://hogarmas.pe/product/mesa-sydney-con-ruedas/" target="_blank" class="underline text-[var(--rojo-medio)] hover:text-[var(--rojo-principal)]">Ver Enlace</a>
+                  </li>
+                  <li>Alfombra para sala 200x290 cm						
+                      <br><a href="https://www.falabella.com.pe/falabella-pe/product/142649136/Alfombra-Decoghar-Diamond-Blue-IC-17434-180x280cm/142649137" target="_blank" class="underline text-[var(--rojo-medio)] hover:text-[var(--rojo-principal)]">Ver Enlace</a>
+                  </li>
+                  <li>Veladores de noche					
+                      <br><a href="https://sodimac.falabella.com.pe/sodimac-pe/product/132080990/Velador-2-Cajones-Lima/132080993?exp=sodimac" target="_blank" class="underline text-[var(--rojo-medio)] hover:text-[var(--rojo-principal)]">Ver Enlace</a>
+                  </li>
+                  <li>2 Puff de sala almacenador					
+                      <br><a href="https://www.falabella.com.pe/falabella-pe/product/prod18302380/Pouff-Velvet-Metal-40x45cm/883333617?kid=shopp69fc&gclsrc=aw.ds&gad_source=1&gad_campaignid=21209754652&gbraid=0AAAAADs9MO2KbeBdK-WvHr2UCSbVV1V0R&gclid=Cj0KCQjwo63HBhCKARIsAHOHV_UgK38lf4thk23qMhWx8OWT10k9opifBp-2CEUhUZQ3E2p4rEnRwuEaAlx1EALw_wcB" target="_blank" class="underline text-[var(--rojo-medio)] hover:text-[var(--rojo-principal)]">Ver Enlace</a>
+                  </li>
+                  <li>Escritorio					
+                      <br><a href="https://sodimac.falabella.com.pe/sodimac-pe/product/133353664/Escritorio-Mendoza-110x30x157cm/133353750?exp=sodimac" target="_blank" class="underline text-[var(--rojo-medio)] hover:text-[var(--rojo-principal)]">Ver Enlace</a>
+                  </li>
+              </ul>
+          </div>
+          <div>
+
+
+              <h4 class="text-2xl border-b-2 border-[var(--rojo-principal)] mb-8 pb-2">Para el Comedor</h4>
+              <ul class="space-y-3">
+                  <li>Juego de 4 sillas de barra						
+                      <br><a href="https://simple.ripley.com.pe/silla-de-bar-ripley-home-nordic-madera-beige-2064347704449p?color_80=beige&gad_campaignid=17212759889&gad_source=1&gclid=Cj0KCQjw58PGBhCkARIsADbDilyhldvDr5SgcQgJA1HEPDaidr2aB-pya5VhKiglx350-pQBHBGFbYoaAgJOEALw_wcB&s=mdco" target="_blank" class="underline text-[var(--rojo-medio)] hover:text-[var(--rojo-principal)]">Ver Enlace</a>
+                  </li>
+                  <li>Juegos de vasos						
+                      <br><a href="https://www.casaideas.com.pe/casa---mesa-set-6-vasos-basic-altos--0000--0018_3203860000181/p" target="_blank" class="underline text-[var(--rojo-medio)] hover:text-[var(--rojo-principal)]">Ver Enlace</a>
+                  </li>
+              </ul>
+          </div>
+          <div>
+
+
+              <h4 class="text-2xl border-b-2 border-[var(--rojo-principal)] mb-8 pb-2">Para el Dormitorio</h4>
+              <ul class="space-y-3">
+                  <li>Deshumedecedor de ambientes						
+                      <br><a href="https://www.falabella.com.pe/falabella-pe/product/122086771/Deshumidificador-Humedad-Hongo-Moho-Molde-Control-de-humedad/122086772" target="_blank" class="underline text-[var(--rojo-medio)] hover:text-[var(--rojo-principal)]">Ver Enlace</a>
+                  </li>
+                  <li>Espejo Led						
+                      <br><a href="https://www.promart.pe/espejo-led-redondo-59x59cm-4mm-luz-blanca-orange/p" target="_blank" class="underline text-[var(--rojo-medio)] hover:text-[var(--rojo-principal)]">Ver Enlace</a>
+                  </li>
+                  <li>Sillon ergonómico para escritorio						
+                      <br><a href="https://www.sodimac.com.pe/sodimac-pe/articulo/133353666/Silla-de-Oficina-Sezawa/133353758?kid=goosho_669250&shop=googleShopping&gad_source=1&gad_campaignid=21524717227&gbraid=0AAAAADOx_19xOgaYTjS7LbCbossZLdGfL&gclid=Cj0KCQjwo63HBhCKARIsAHOHV_U27YSxtFOIFXlIZk0Ot2mUMaYjB2NX0J0mnNg2bQ1nccsONFxqmJYaAhQyEALw_wcB" target="_blank" class="underline text-[var(--rojo-medio)] hover:text-[var(--rojo-principal)]">Ver Enlace</a>
+                  </li>
+              </ul>
+          </div>
+          <div>
+
+
+              <h4 class="text-2xl border-b-2 border-[var(--rojo-principal)] mb-8 pb-2">Para la Cocina</h4>
+              <ul class="space-y-3">
+                  <li>Set de Cuchillos						
+                      <br><a href="https://hiraoka.com.pe/set-de-cuchillos-tijeras-miray-scm-3-8-pzas?utm_id=22793891402&gad_source=1&gad_campaignid=22793891402&gbraid=0AAAAACkNDqlSARMC3JQRWeHMRpQXJq64n&gclid=Cj0KCQjw6bfHBhDNARIsAIGsqLhvQ7peDk1XsVEyhry-s4b7UzeLN6bHAwuHNP3SH50LRjHYJgjcka0aAiOtEALw_wcB" target="_blank" class="underline text-[var(--rojo-medio)] hover:text-[var(--rojo-principal)]">Ver Enlace</a>
+                  </li>
+                  <li>Set de Ollas						
+                      <br><a href="https://www.promart.pe/juego-de-ollas-orange-plus-7-piezas-negra-159782/p" target="_blank" class="underline text-[var(--rojo-medio)] hover:text-[var(--rojo-principal)]">Ver Enlace</a>
+                  </li>
+                  <li>Tapers Herméticos de Vidrio						
+                      <br><a href="https://tottus.falabella.com.pe/tottus-pe/product/129772606/set-x-10-pcs-hermetico-vidrio/129772607" target="_blank" class="underline text-[var(--rojo-medio)] hover:text-[var(--rojo-principal)]">Ver Enlace</a>
+                  </li>
+                  <li>Jarra de vidrio con tapa 						
+                      <br><a href="https://tottus.falabella.com.pe/tottus-pe/product/129772606/set-x-10-pcs-hermetico-vidrio/129772607" target="_blank" class="underline text-[var(--rojo-medio)] hover:text-[var(--rojo-principal)]">Ver Enlace</a>
+                  </li>
+                  <li>Extractor de jugo						
+                  </li>
+              </ul>
+          </div>
+          <div>
+              <h4 class="text-2xl border-b-2 border-[var(--rojo-principal)] mb-8 pb-2">Otros</h4>
+              <ul class="space-y-3">
+                  <li>Tacho de basura para cocina						
+                  </li>
+                  <li>Set de utensilios de cocina						
+                  </li>
+                  <li>Floreros
+                     </li>						
+                  <li>Tabla de planchar 						
+                      <br><a href="https://sodimac.falabella.com.pe/sodimac-pe/product/113780956/Planchador-De-Ropa-81X33-Cm-Clasico/113780957" target="_blank" class="underline text-[var(--rojo-medio)] hover:text-[var(--rojo-principal)]">Ver Enlace</a>
+                  </li>
+                  <li>Trapeador giratorio automatico 						
+                      <br><a href="https://www.falabella.com.pe/falabella-pe/product/140730155/Trapeador-Giratorio-360-Magic-Con-Ruedas-+-2-Mopas-CELESTE/140730156" target="_blank" class="underline text-[var(--rojo-medio)] hover:text-[var(--rojo-principal)]">Ver Enlace</a>
+                  </li>
+              </ul>
+          </div>
+        </div>
+        <p class="text-center mt-6 text-lg text-[var(--rojo-principal)]">
+            ¡También me alegrarían unas plantitas! <br>
+            <ul class="list-none p-0 mt-2">
+                <li>Confirmar el Regalo
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdl_-6YXabMLOuAJ3v_Jp7m2-mZJJEjUST7UZVUV_QcUH46bQ/viewform?usp=sharing&ouid=115000652196367282233" target="_blank" class="underline text-[var(--rojo-medio)] hover:text-[var(--rojo-principal)]">Ingresa Aqui</a>
+                </li>
+            </ul>
+             <br><strong>Yape:</strong> <span class="text-[var(--rojo-principal)] font-bold">934812804</span>
+        </p>
+        <div class="text-center mt-8">
+            <button class="btn btn-primary" onclick="showSection('sec6')">Confirmación final</button>
+        </div>
+    </div>
+</section>
+
+
+<section <section id="sec6" class="section" style="background: var(--rojo-claro);">
+  <div class="card animate__animated animate__fadeInUp">
+    
+    <!-- Animación Lottie -->
+    <dotlottie-wc 
+      src="https://lottie.host/34aa6bf1-5ced-45f4-bb7f-53999a92287b/nn4JZSVry1.lottie"
+      style="width: 300px; height: 300px; margin: auto;"
+      autoplay
+      loop>
+    </dotlottie-wc>
+
+    <h2 class="text-5xl font-display mb-4 text-[var(--rojo-principal)]">¡No faltes!</h2>
+    <p class="text-4lg mb-6 text-[var(--rojo-principal)]">
+      Tu compañía es el mejor regalo.<br>
+      Lo único que quiero es celebrar este momento contigo, !<br>
+      así que no te preocupes por nada más y ven.
+    </p>
+    <p class="text-2xl font-subtitle mb-4 text-[var(--rojo-medio)]">
+      ¡Te espero con mucho cariño!
+    </p>
+    <button class="btn btn-secondary" onclick="showSection('sec1')">
+      <i class="fas fa-arrow-up"></i> Volver al inicio
+    </button>
+  </div>
+</section>
+
+<!-- Librería para reproducir archivos .lottie -->
+<script 
+  src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.8.1/dist/dotlottie-wc.js" 
+  type="module">
+</script>
+
+</section>
+
+<!-- Scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.13/lottie.min.js"></script>
+<script>
+  // Cargar la animación JSON aquí
+  var animation = lottie.loadAnimation({
+    container: document.getElementById('lottie'),
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: "https://lottie.host/84e21994-b6dc-47ad-9e05-2c3e7b6c3f68/vzsyNhwKxF.json" // 👈 Aquí va el enlace JSON
+  });
+</script>
+
+
+<script>
+    // Establecer la primera sección como activa al cargar
+    document.addEventListener('DOMContentLoaded', () => {
+        // Ocultar todas las secciones excepto la primera
+        document.querySelectorAll('.section').forEach(s => s.classList.remove('active-section'));
+        const firstSection = document.getElementById('sec1');
+        if (firstSection) {
+            firstSection.classList.add('active-section');
+        }
+    });
+
+    function showSection(idToShow) {
+        // Ocultar todas las secciones
+        document.querySelectorAll('.section').forEach(section => {
+            section.classList.remove('active-section');
+        });
+        
+        // Mostrar la sección deseada
+        const sectionToShow = document.getElementById(idToShow);
+        if (sectionToShow) {
+            sectionToShow.classList.add('active-section');
+        }
+    }
+</script>
+</body>
+</html>
